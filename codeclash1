@@ -1,0 +1,10 @@
+solution:
+o = input()
+if(o=="Stone"):
+    print("Hand")
+elif(o=="Scissors"):
+    print("Stone")
+elif(o=="Hand"):
+    print("Scissors")   
+else:
+    print("Error")       
