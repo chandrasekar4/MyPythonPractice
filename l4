@@ -1,0 +1,44 @@
+Dhoni, as known, is a dangerous hard hitter who can tear any bowling attack apart. He is a late order batsman with a strike rate of 90 and can strike and hit the ball extremely hard. He has done unbelievable efforts in winning Indian team many times with his aggressive batting and is considered to be one of the All Time Best Finishers in Cricket History.
+
+With so much praise to add to his remarkable batting skills, let us here calculate the stats of the number of 6's and 4's that Dhoni had succeeded in hitting in a match. Given the number of balls "n" that Dhoni faced in a match and runs scored by him in each ball, write a program to find the number of 4's and 6's.
+
+Input Format:
+First line of the input is an integer that specifies the number of balls "n" that Dhoni had faced in a match.
+Next "n" lines have an integer that specifies the runs scored by Dhoni in each ball.
+
+Output Format:
+Output should display the number of 4's and 6's hit by Dhoni in the match, in separate lines.
+
+Sample Input 1:
+3
+4
+5
+4
+
+Sample Output 1:
+2
+0
+
+Sample Input 2:
+6
+2
+3
+2
+4
+6
+6
+
+Sample Output 2:
+1
+2
+solution:
+n=int(input())
+four=0
+sixes=0
+for i in range(n):
+    run=int(input())
+    if(run==4):
+        four+=1
+    elif(run==6):
+        sixes+=1
+print(four,sixes)    
