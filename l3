@@ -1,0 +1,42 @@
+While Dhoni was studying in Class VII that football's loss became cricket's gain. It was only due to the regular wicket-keeper being unavailable, that his sports teacher KR Banerjee asked Dhoni to try his hand at wicket-keeping.
+
+When Dhoni donned his keeper's gloves for the first time, he found it a bit challenging to adapt to the wicket-keeping saves. Banerjee threw infinite number of balls to make Dhoni recognise the right strategy to catch the ball instead of punching it. Dhoni missed a lot of balls in the beginning but picked up fairly later.
+
+Write a program to find the number throws required to achieve "n" catches. There are infinite throws, so break the input when the number of "True"s equals "n".
+
+Input Format:
+First line of the input contains an integer that specifies the number of catches "n".
+Next "n" lines contains a boolean value that specifies "True" if every throw was a catch or "False" if it was a miss.
+
+Output Format:
+Output should display an integer that returns the number of throws required for achieving "n" catches by Dhoni.
+
+Sample Input:
+5
+True
+False
+False
+True
+False
+True
+False
+False
+True
+False
+True
+
+Sample Output:
+11
+
+solution:
+n=int(input())
+a=0
+i=0
+while(i<n):
+    catch=input()
+    a+=1
+    if catch=="True":
+        i+=1
+print(a)        
+     
+    
