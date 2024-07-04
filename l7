@@ -1,0 +1,39 @@
+Dhoni made his 'Ranji Trophy debut for Bihar in the 1999-2000 season as an eighteen-year-old. He made a half century in his debut match scoring 68" in the second innings against Assam cricket team.
+
+For the purpose of gathering statistics about the match, let us consider Assam put up a target of "x" runs for Bihar to chase. If the runs scored in each and every ball by the Bihar team is given, write a program to calculate the number of overs did Bihar take to win the match.
+
+The input, to get the runs scored in each and every ball, should break, when the target runs are reached.
+
+Input Format:
+First line of the input is an integer "X" that specifies the target runs set for the Bihar team.
+Next consecutive lines contain the integer that specifies the runs scored in each ball of the Bihar innings.
+
+Output Format:
+Output should display the integer values that represents the number of overs and balls required to win the match, in separate lines.
+
+Sample Input:
+15
+2
+4
+1
+2
+1
+1
+1
+6
+
+Sample Output:
+1
+2
+solution:
+target=int(input())
+runs=0
+balls=0
+while runs<target:
+    ballrun=int(input())
+    runs+=ballrun
+    balls+=1
+overs=balls//6
+ball=balls%6
+print(overs)
+print(ball)
