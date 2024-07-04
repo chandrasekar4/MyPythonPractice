@@ -1,0 +1,45 @@
+Dhoni himself revealed that Football was his first love and he was more inclined towards football since a school boy. Christiano Ronaldo being his favorite player among the English Clubs, Dhoni was so impressive with his saves as a goal keeper for his school football team.
+
+Imagine the scale of the goal post is from 1 to 10. Dhoni, the goal keeper, stands at the mid point 5. Those kicks that are saved between the points 1 and 2 are likely to be a left corner save and those that are saved between the points 9 and 10 are likely to be a right corner save.
+
+Write a program that finds the number of corer saves given the point at which each kick hits the goal post.
+
+Input Format:
+First line of the input is an integer that speficies the number of kicks.
+Second line is an integer that specifies the point at which the kick hits the goal post.
+
+Output Format:
+Output displays the integer that specifies the number of corner saves that is likely to be.
+
+Sample Input 1:
+6
+2
+9
+3
+6
+1
+8
+
+Sample Output 1:
+3
+
+Sample Input 2:
+5
+2
+1
+10
+9
+2
+
+Sample Output 2:
+5
+
+
+solution:
+count=0
+n=int(input())
+for i in range(n):
+    y=int(input())
+    if(y<=2 or y>=9):
+        count+=1
+print(count)    
