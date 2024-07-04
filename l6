@@ -1,0 +1,73 @@
+In a matter of 10-11 years, not only has he become India's most successful captain, but he's also changed the Gentleman game in ways that one could only dream of. No doubt he is the master in all formats of the game, a special mention for the limited-over games.
+
+Consider a limited-over game that has "n" overs and Dhoni's team has been made to chase a target of "x" runs. Given the runs scored by his team in each and every ball of the game, can you analyze if the team has won or lost? If they had won, calculate the number of overs that was required by the team to win it. Write a program to find the same.
+
+The input, to get the runs scored in each ball, should break under two conditions: when the number of overs exceeds "n" or when the total runs scored exceeds the target "x" runs. 
+
+Input Format:
+First line of the input contains the integer that specifies the number of overs "n" of the match.
+Second line is an integer that specifies the target runs "x" chased by the team.
+Next consecutive lines specify the runs scored by each and every ball of the match.
+
+Output Format:
+Output should display "Won" or "Lost" based on the conditions given above.
+If they had won the match, the second line of the input should display the integer values that returns the number of overs and balls required to win the match, in separate lines.
+
+Sample Input 1:
+2
+10
+1
+1
+1
+2
+1
+1
+1
+6
+
+Sample Output 1:
+Won
+1
+2
+
+Sample Input 2:
+2
+20
+1
+0
+0
+0
+1
+1
+4
+6
+1
+1
+2
+2
+
+Sample Output 2:
+Lost
+solution:
+n=int(input())
+target=int(input())
+tr=0
+balls=0
+while balls<n*6:
+    runs=input()
+    if not runs:
+        break;
+    runs=int(runs)
+    tr+=runs
+    balls+=1
+    if tr>=target:
+        break;
+if tr>=target:
+    print("Won")
+    overs=balls//6
+    ball=balls%6
+    print(overs)
+    print(ball)
+else:
+    print("Lost")
+        
