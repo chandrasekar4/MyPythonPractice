@@ -1,0 +1,67 @@
+Into the world cup
+
+Qualifier matches for the ICC World Cup 2011 were in full swing and Indian team was in a critical situation wherein, in order to make it to the quarter-finals, India must win their next match with a higher margin of run rate. Formally, India has to win the match within "X" balls in order to get qualified.
+
+With all the upper order batsman losing their wickets at quick succession, India's final hope rest in the hands of the aggressive hitter Dhoni. Dhoni came to the crease in as number 5 batsmen and puts up a consistent game in the beginning with ones and twos hard and maintained the run-rate. Later on, Dhoni shifted gears instantaneously, piercing the gaps with ease.
+
+Given are the details, number of balls "X" within which India should finish the match, India's target score, Dhoni's batting order, scores of all his previous batsmen, calculate the current score of the team. Now, get the scores of Dhoni in each and every ball he faces. Assuming India wins the match, write a program that determines if India wins the match within "x" balls and gets qualified for the Quarter finals.
+
+Input Format:
+First line is an integer that specifies the target runs chased by India.
+Second line of the input is an integer "x", the number of balls within which India should win the match.
+Third line is an integer that specifies the number of wickets.
+Next N+2 lines contain the integers that specify the scores of all his previous batsmen and batsmen currently in the crease. Next consecutive lines get the scores of Dhoni in each and every ball he faces.
+
+Output Format:
+Output should display "Yes" if India wins and qualifies for the World Cup otherwise print "No".
+
+Sample Input 1:
+100
+5
+3
+50
+30
+0
+5
+5
+5
+5
+
+Sample Output 1:
+Yes
+
+Sample Input 2:
+100
+5
+3
+50
+30
+0
+5
+5
+1
+0
+1
+2
+1
+7
+
+Sample Output2:
+No
+solution:
+target=int(input())
+x=int(input())
+wickets=int(input())
+india_score=0
+for i in range(wickets+2):
+    run=int(input())
+    india_score+=run
+bc=0
+while(india_score<target):
+    dhoni_run=int(input())
+    india_score+=dhoni_run
+    bc+=1 
+if(bc<=x):
+    print("Yes")
+else:
+    print("No")
