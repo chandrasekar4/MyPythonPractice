@@ -1,0 +1,63 @@
+Dhoni's father is a stickler for discipline and Dhoni admits of being scared of him as a boy. He wanted Dhoni to focus on his studies and score good marks which would fetch him a good job. When Dhoni expressed his interest to play for the school cricket team at the age of 11, his dad agreed to Dhoni but on a condition that he could play cricket only if he studies fairly.
+
+
+
+He had always insisted Dhoni to schedule his study and play activities and based on it there were "n" days in the schedule. Everyday Dhoni has to spend "x" hours for study and if his total study hours is greater than the threshold, his Dad would let him go for the practice.
+
+
+
+Write a program that determines if Dhoni can attend the practice given the "n" the number of days in the schedule, "x" number of hours that Dhoni should spend daily for studies and the threshold value fixed by his Dad.
+
+
+
+Input Format:
+
+First line of the input is an integer that specifies "n" the number of days in the schedule of Dhoni. Second line specifies integer "x" number of hours that Dhoni should spend daily for studies. Third line is an integer that specifies the threshold value.
+
+
+
+Output Format:
+
+Output should display "Yes" if the conditions as said above is satisfied else print "No".
+
+
+
+Sample Input 1:
+
+7
+
+3
+
+5
+
+2
+
+7
+
+5
+
+3
+
+4
+
+20
+
+Samle Output 1:
+
+Yes
+solution:
+n=int(input())
+x=0
+tot=0
+for x in range(0,n):
+    x=int(input())
+    x+=1
+    if(x>=0):
+        tot+=x
+tv=int(input())
+if(x<0):
+    print("No")
+elif(tot>=tv):
+    print("Yes")
+elif(tot<tv):
+    print("No")
