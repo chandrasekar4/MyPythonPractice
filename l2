@@ -1,0 +1,44 @@
+Dhoni had put up great efforts and determination to perfect the art of wicket-keeping that he practiced day in and out even during freezing winter. He strived hard continuously for 18 months and played his first game for the Commando cricket club.
+
+Every throw from a bowler is either missed or blocked or caught by the keeper Dhoni. Given "n" throws and the outcome of it (misses/blocks/catches), write a program that finds the number of missed deliveries, number of blocked deliveries and number of caught deliveries.
+
+Input Format:
+First line of the input is an integer that specifies the number of throws "n" of a bowler.
+Next "n" lines contains a string that specifies the outcome of each of the throws - 'M' for misses/'B' for blocks/'C' for catches.
+
+Output Format:
+Output should display 3 integers that returns the count of missed, blocked and caught deliveries by Dhoni.
+
+Sample Input:
+9
+M
+C
+C
+C
+M
+M
+B
+M
+B
+
+Sample Output:
+4
+2
+3
+
+solution:
+n=int(input())
+missed=0
+blocked=0
+catch=0
+for i in range(n):
+    ball=input()
+    if(ball=='M'):
+        missed+=1
+    elif(ball=='B'):
+        blocked+=1
+    elif(ball=='C'):
+        catch+=1
+print(missed,blocked,catch)        
+    
+    
